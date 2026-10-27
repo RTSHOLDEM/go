@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITLE__</title>
+<meta property="og:title" content="__TITLE__">
+<meta name="robots" content="noindex">
+<style>
+:root{color-scheme:dark}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:24px 16px;box-sizing:border-box;
+background:#060607;color:#f2f2f4;font:16px/1.4 -apple-system,Inter,Helvetica,Arial,sans-serif;text-align:center}
+a.btn{display:inline-block;background:#fd0606;color:#fff;text-decoration:none;font-weight:600;padding:15px 28px;border-radius:999px;font-size:17px}
+small{opacity:.6}
+</style></head><body>
+<div>__TITLE__</div>
+<a class="btn" id="go" href="__URL__">Ouvrir</a>
+<small>Ouverture…</small>
+<script>
+(function(){
+  // Like taap.it: leave the Instagram / TikTok in-app browser for the real browser.
+  var web="__URL__", ua=navigator.userAgent, inApp=/Instagram|FBAN|FBAV|TikTok|musical_ly|Snapchat/i.test(ua), app;
+  if(inApp && /android/i.test(ua)){
+    app="intent://"+web.replace(/^https?:\/\//,"")+"#Intent;scheme=https;S.browser_fallback_url="+encodeURIComponent(web)+";end";
+  }else if(inApp && /iphone|ipad|ipod/i.test(ua)){
+    app="x-safari-"+web;
+  }
+  if(!app){location.replace(web);return}
+  document.getElementById("go").href=app;
+  location.href=app;
+  // still here after 1.5 s = the browser switch was blocked: open the page right here
+  setTimeout(function(){ if(!document.hidden) location.replace(web); },1500);
+})();
+</script>
+</body></html>
