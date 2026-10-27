@@ -6,4 +6,4 @@ New link: `tools/new.sh <slug> <videoId> "<title>"` -> https://rtsholdem.github.
 
 Android: intent:// to the YouTube app, web fallback. iPhone: youtube:// scheme, web fallback after 2.5 s. Desktop: plain redirect.
 
-Website link: `tools/site.sh <slug> <url> "<title>"` (opens the real browser from Instagram/TikTok, like taap.it). Live: candidater -> https://rtspoker.com/candidater
+Website link: `tools/site.sh <slug> <url> "<title>"` (opens the real browser from Instagram/TikTok, like taap.it). Live: candidater -> https://rtspoker.com (home, not the form: Alexis 2026-10-27)
