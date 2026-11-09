@@ -27,7 +27,6 @@ a.btn:active{background:rgba(255,197,118,.3)}
   function out(web){
     return ios ? "x-safari-"+web : "intent://"+web.replace(/^https?:\/\//,"")+"#Intent;scheme=https;S.browser_fallback_url="+encodeURIComponent(web)+";end";
   }
-  ["tt","x"].forEach(function(id){var a=document.getElementById(id);a.href=out(a.href)});
   location.href=out(location.href);
 })();
 </script>

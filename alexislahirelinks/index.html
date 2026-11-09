@@ -52,7 +52,6 @@ a.vid span{display:block;padding:12px 14px 14px;font-weight:600;font-size:15px;l
   function out(web){
     return ios ? "x-safari-"+web : "intent://"+web.replace(/^https?:\/\//,"")+"#Intent;scheme=https;S.browser_fallback_url="+encodeURIComponent(web)+";end";
   }
-  document.querySelectorAll("a").forEach(function(a){a.href=out(a.href)});
   location.href=out(location.href);
 })();
 </script>
